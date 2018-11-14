@@ -9,16 +9,13 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
+/* Estilos de seccion "container" */
 
 .container {
 	margin: 0px;
 	border: 0px;
 	border-radius: 10px 10px 0px 0px;
 	background-color:  #5b7989;
-}
-
-.container div {
-	padding: 10px;
 }
 
 .titulo {
@@ -39,26 +36,73 @@ a {
   color: #ffffff;
 }
 
-a:visited {
+ #dec {
 	text-decoration: none;
 }
 
-.container {
-	display: -webkit-flex;
+/* Estilos de la seccion "figure" */
+
+.images {
+	margin: 0px;
+}
+.img_main {
+	padding: 20px 0px 20px 0px;
+	margin: 0px;
+	background-color: #82c3a6;
+}
+.img_sec, .img_txt {
+	margin: 0px;
+	background-color: #d5c75f;
+}
+.img_main,.img_sec,.img_txt, figcaption {
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+#img_sec1, #img_sec2, figcaption {
+	width: 50%;
+	margin: 0px;
+}
+#img_sec1 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 0px 0px 50px;
+}
+#img_sec2 {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 20px 50px 0px 0px;
+}
+img {
+  -webkit-box-shadow: 2px 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px 2px #02010a;
+	border: 1px solid;
+}
+.img_txt a {
+	color: #000000;
+	font-size: 150%;
+	font-weight: bold;
+}
+.img_txt  {
+	padding: 0px;
 }
 
-.titulo, .navbar_top {
-	width: 100%;
-}
-
+/* Uso de @media */
 @media (min-width: 900px) {
+	/* Container y sus elementos */
 	.container {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
 		width: 900px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.container div {
+		padding: 10px;
 	}
 	.titulo {
 		width: 60%;
@@ -66,24 +110,42 @@ a:visited {
 	.navbar_top {
 		width: 35%;
 	}
+/* Imagenes */
+	.images {
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-@media (max-width: 420px) {
-	.container {
+@media (max-width: 899px) {
+		/* Container e imagenes */
+	.container, .images, .img_sec {
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-flow: column wrap;
 		flex-flow: column wrap;
 	}
-	.navbar_top {
+	.container, div {
+		padding: 0px;
+	}
+	#img_sec1, #img_sec2 {
+		padding: 20px 0px 20px 0px;
+	}
+	.navbar_top, .titulo, #img_sec1, #img_sec2 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 100%
 	}
 	.titulo h1 {
 		text-align: center;
 	}
+	#img_sec1, #img_sec2 {
+		width: 100%;
+	}
 }
+
 @keyframes header-animacion {
 	0% {
 		position: relative;
