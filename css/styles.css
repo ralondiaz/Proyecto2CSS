@@ -14,6 +14,7 @@ body {
 .container {
 	margin: 0px;
 	border: 0px;
+	padding: 0px;
 	border-radius: 10px 10px 0px 0px;
 	background-color:  #5b7989;
 }
@@ -53,10 +54,10 @@ a {
 .img_sec {
 	margin: 0px;
 	background-color: #d5c75f;
-	padding: 0px 0px 10px 0px;;
+	padding: 0px 0px 10px 0px;
 	width: 100%;
 }
-.img_main,.img_sec {
+.img_main, .img_sec {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -104,9 +105,27 @@ figcaption {
  .img_main img, .img_sec2 img, .img_sec1 img {
   -webkit-box-shadow: 2px 2px 2px #02010a;
   -moz-box-shadow: 2px 2px 2px #02010a;
-	border: 1px solid;
+	border: 1px soid;
 }
-/* Transformaciones */
+.galeria {
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	margin: 0px;
+	background-color: #d5c75f;
+	padding: 0px;
+}
+.galeria div {
+	width: 280px;
+	padding: 10px 0px 10px 0px;
+}
+.galeria img {
+	width: 90%;
+	display:block;
+	margin:auto;
+}
+
+/* Transformaciones y efectos */
 
 .img_sec2 img:hover {
 	transform: translate(20px, -5px);
@@ -124,6 +143,18 @@ figcaption {
  -webkit-transition-duration: 3s; /* Safari */
  transition-duration: 3s;
 }
+.img_p_1 {
+    -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+    filter: blur(10px);
+}
+.galeria div:nth-child(even){
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.img_p_3 {
+    -webkit-filter: sepia(90%); /* Safari */
+    filter: blur(90%);
+}
 
 /* Estilos del footer */
 
@@ -137,7 +168,7 @@ figcaption {
 	justify-content: space-between;
 }
 .footer div {
-	width: 200;
+	width: 200px;
 }
 .contacto {
 	padding-left: 20px;
@@ -156,7 +187,7 @@ figcaption {
 /* Uso de @media */
 @media (min-width: 900px) {
 	/* Container y sus elementos */
-	.container, .img_sec, .footer {
+	.container, .img_sec, .footer, .galeria {
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-flow: row wrap;
@@ -175,7 +206,7 @@ figcaption {
 		width: 35%;
 	}
 /* Imagenes */
-	.images {
+	.images, .galeria {
 		width: 900px;
 		margin-left: auto;
 		margin-right: auto;
@@ -190,7 +221,7 @@ figcaption {
 
 @media (max-width: 899px) {
 		/* Container e imagenes */
-	.container, .images, .img_sec, .footer {
+	.container, .images, .img_sec, .footer, .galeria {
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-flow: column wrap;
