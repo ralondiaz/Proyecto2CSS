@@ -2,7 +2,7 @@
 	font-family: DancingScript;
 	src: url(../fonts/DancingScript-Regular.ttf);
 }
-
+/* Estilos del cuerpo de la pagina */
 body {
   font-family: DancingScript;
   background-color: #02010a;
@@ -83,12 +83,6 @@ figcaption {
 	padding-left: 20px;
 	padding-bottom: 2px;
 }
-.img_sec1 img:hover {
- -webkit-transform: rotate(10deg);
- -moz-transform: rotate(10deg);
- -ms-transform: rotate(10deg);
- transform: rotate(10deg);
-}
 .img_sec2 {
 	display: flex;
 	justify-content: flex-end;
@@ -96,12 +90,6 @@ figcaption {
 	padding-top: 20px;
 	padding-right: 20px;
 	padding-bottom: 2px;
-}
-.img_sec2 img:hover {
-    transform: translate(20px, -5px);
-    -ms-transform: translate(20px, -5px); /* IE 9 */
-    -webkit-transform: translate(20px, -5px); /* Safari y Chrome */
-    -moz-transform: translate(20px, -5px); /* Firefox */
 }
 .text1 {
 	display: flex;
@@ -118,7 +106,24 @@ figcaption {
   -moz-box-shadow: 2px 2px 2px #02010a;
 	border: 1px solid;
 }
+/* Transformaciones */
 
+.img_sec2 img:hover {
+	transform: translate(20px, -5px);
+	-ms-transform: translate(20px, -5px); /* IE 9 */
+	-webkit-transform: translate(20px, -5px); /* Safari y Chrome */
+	-moz-transform: translate(20px, -5px); /* Firefox */
+	-webkit-transition-duration: 3s; /* Safari */
+	transition-duration: 3s;
+}
+.img_sec1 img:hover {
+ -webkit-transform: rotate(10deg);
+ -moz-transform: rotate(10deg); /* Firefox */
+ -ms-transform: rotate(10deg); /* IE 9 */
+ transform: rotate(10deg);
+ -webkit-transition-duration: 3s; /* Safari */
+ transition-duration: 3s;
+}
 
 /* Estilos del footer */
 
@@ -144,6 +149,9 @@ figcaption {
 	width: 16px;
 	height: 16px;
 	padding: 0px 5px 0px 0px;
+}
+.footer a {
+	color: #000000;
 }
 /* Uso de @media */
 @media (min-width: 900px) {
@@ -178,7 +186,6 @@ figcaption {
 	.img2, .img3 {
 		 width: 90%;
 	}
-
 }
 
 @media (max-width: 899px) {
@@ -230,6 +237,22 @@ figcaption {
 	.footer div {
 		width: 100%;
 		padding-left: 30px;
+	}
+	.img_sec2 img:hover {
+		transform: translate(20px, -5px);
+		-ms-transform: translate(20px, -5px); /* IE 9 */
+		-webkit-transform: translate(20px, -5px); /* Safari y Chrome */
+		-moz-transform: translate(20px, -5px); /* Firefox */
+		-webkit-transition-duration: 3s; /* Safari */
+		transition-duration: 3s;
+	}
+	.img_sec1 img:hover {
+	 -webkit-transform: rotate(10deg);
+	 -moz-transform: rotate(10deg);
+	 -ms-transform: rotate(10deg);
+	 transform: rotate(10deg);
+	 -webkit-transition-duration: 3s; /* Safari */
+	 transition-duration: 3s;
 	}
 }
 
